@@ -9,6 +9,8 @@ class Ponto2D
 private:
     double x;        // Ponto X do plano cartesiano
     double y;        // Ponto Y do plano cartesiano
+    int distOrg;        // Distancia entre o ponto e a origem
+    int dist;        // Distancia entre dois pontos
     int id;          // Id referente a cada ponto
     int getNextId(); // Incrementa um no ID
 
@@ -27,8 +29,8 @@ public:
 
     // other methods
     void print() const;
-    void sumOf(Ponto2D) const; // n tenho certeza se tem que colocar o const
-    Ponto2D sumOf(Ponto2D);
+    void sumOf(Ponto2D); 
+    Ponto2D sumOfTwoPoints(Ponto2D);
     double distToOrig();
     double distTo(Ponto2D);
 };

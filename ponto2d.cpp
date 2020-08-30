@@ -1,4 +1,5 @@
 #include "ponto2d.hpp"
+#include <cmath>
 
 //Constructors
 
@@ -63,16 +64,38 @@ int Ponto2D::getNextId()
 
 void Ponto2D::print() const
 {
+
+    std::cout<<"Seu ponto eh: ("<<x<<","<<y<<")"<<endl;
+
 }
 double Ponto2D::distToOrig()
 {
+
+    distOrg = sqrt((x*x)+(y*y));
+    return dist;
+
 }
-double Ponto2D::distTo(Ponto2D)
+double Ponto2D::distTo(Ponto2D p2)
 {
+
+    dist = sqrt(((this->getX()-p2.getX())*(this->getX()-p2.getX()))+((this->getY()-p2.getY())*(this->getY()-p2.getY())));
+    return dist;
+
 }
-void Ponto2D::sumOf(Ponto2D) const
+void Ponto2D::sumOf(Ponto2D p2) 
 {
+
+    setX(getX() + p2.getX());
+    setY(getY() + p2.getY()); 
+
 }
-Ponto2D Ponto2D::sumOf(Ponto2D)
+Ponto2D Ponto2D::sumOfTwoPoints(Ponto2D p2)
 {
+    Ponto2D p3;
+
+    p3.setX(getX() + p2.getX());
+    p3.setY(getY() + p2.getY()); 
+
+    return p3;
+
 }
