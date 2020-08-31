@@ -41,12 +41,12 @@ void Ponto2D::setId(int ID)
     this->id = ID;
 }
 //Altera o valor de X
-void Ponto2D::setX(int X)
+void Ponto2D::setX(double X)
 {
     this->x = X;
 }
 //Altera o valor de Y
-void Ponto2D::setY(int Y)
+void Ponto2D::setY(double Y)
 {
     this->y = Y;
 }
@@ -72,7 +72,7 @@ double Ponto2D::distToOrig()
 {
 
     distOrg = sqrt((x*x)+(y*y));
-    return dist;
+    return distOrg;
 
 }
 double Ponto2D::distTo(Ponto2D p2)

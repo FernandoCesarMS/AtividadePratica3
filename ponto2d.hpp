@@ -23,8 +23,8 @@ public:
     double getX();
     double getY();
     int getId();
-    void setX(int);
-    void setY(int);
+    void setX(double);
+    void setY(double);
     void setId(int);
 
     // other methods
